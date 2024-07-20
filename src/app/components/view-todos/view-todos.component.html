@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header h3">My Todos</div>
+        <div class="card-body">
+         <app-todo-elements *ngFor="let todo of todos" [todo] = "todo" (deleteEvent)="deleteEventFromChild($event)"></app-todo-elements>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

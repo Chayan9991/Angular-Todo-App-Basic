@@ -1,0 +1,18 @@
+
+
+<div class="card border-1 mb-2">
+  <div class="card-header h5 border-0"
+       [ngClass]="{
+       'bg-success-subtle': todo.complete,
+       'bg-danger-subtle': !todo.complete
+     }">
+    {{todo.title}}
+  </div>
+
+  <div class="card-body">{{todo.description}}
+  </div>
+  <div class="container d-flex gap-2 mb-2">
+    <div class="btn btn-sm btn-primary" [routerLink]="['/update-todo', todo.id]">Update</div>
+    <div class="btn btn-sm btn-danger" (click)="deleteTodo(todo.id)">Delete</div>
+  </div>
+</div>
